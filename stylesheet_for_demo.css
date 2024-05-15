@@ -1,5 +1,12 @@
 body {
-    overflow: hidden;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    background-color: #090947;
+    background-image: linear-gradient(315deg, #10109a 0%, #012842 74%);
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    min-height: 100vh; /* Ensure body covers at least the full height of the viewport */
 }
 .main-text{
     padding: 20px;
@@ -26,6 +33,10 @@ body {
 }
 #enc_message, #second_enc_message{
     max-width: 150px;
+    width: 300px;
+    height: fit-content;
+    font-size: large;
+;
 }
 .scale-down-bottom{
     opacity: 1;

@@ -2,23 +2,25 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stylesheet_for_demo.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="jquery.fittext.js"></script>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Live Demo</title>
 </head>
 <body>
 <nav class="navbar">
-    <img style="width: 48px; height: 48px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/html-2752158-2284975.png?f=webp">
+    <a href="./new.html">
+        <img style="width: 48px; height: 48px" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/html-2752158-2284975.png?f=webp" alt="HTML Icon">
+    </a>
     <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./new.html">Demo</a>
-    <button class="button is-gray" onclick="redir()">Load Page</button>
+    <a class="navbar-item" target="_blank" rel="noopener noreferrer" href="./e2ee_princip.html">Jak tohle funguje</a>
 </nav>
 <div class="flex-container" style="padding: 10px">
     <div class="sub-box">
         <input type="text" style="position: absolute" class="input is-info column animation-element hidden" id="textInput" placeholder="Your input" maxlength="50" autocomplete="off">
         <div id="outputDiv" style="position: relative" class="notification is-link column animation-element scale-down-bottom hidden active">
-            adiadjaisj
+            Placeholder
         </div>
         <br>
         <img src="images/arrow-down.svg" class="animation-element">
@@ -29,18 +31,30 @@
         <br>
         <img src="images/arrow-down.svg" class="animation-element">
         <div id="enc_message" class="notification is-link column animation-element scale-up-bottom message-anim">
-            1c17626014fb19583d73d19cc60e11d1
+            Placeholder
         </div>
+        <article class="message is-info" style="padding-top: 30px; max-width: 600px">
+            <div class="message-header">
+                <p>Jak funguje šifrování</p>
+            </div>
+            <div class="message-body">
+                Tohle je příklad šifrování zpáv.
+                Zpráva se před odesláním zašifruje veřejným klíčem druhé strany. Zpráva jde internetem zašifrovaná
+                a nikdo jí nemůže přečíst kromě příjemce. Přijemce svou
+                zprávu odemkne svým soukromým klíčem a dostane zpět zprávu.
+            </div>
+        </article>
     </div>
     <div class="sub-box">
         <p style="font-size: 1.2rem">This is the public key</p>
         <div class="text" style="text-align: justify; max-width: 275px; height: 64px; overflow: hidden; font-size: 0.8rem"></div>
-        <img src="images/server-icon.svg" style="opacity: 60%; scale: 0.7">
+        <img src="images/server-icon.svg" style="opacity: 60%; scale: 0.5">
         <h1 class="title is-1">Server</h1>
+        <button class="button is-warning is-dark" style="font-size: larger; z-index: 9999;" onclick="resetAnimations()">Reset Animations</button>
     </div>
     <div class="sub-box">
         <div id="dec_message" class="notification is-danger column animation-element scale-up-second">
-            Primar lorem
+            Placeholder
         </div>
         <br>
         <img src="images/arrow-down.svg" style="transform: rotate(180deg);" class="animation-element">
@@ -51,7 +65,7 @@
         <br>
         <img src="images/arrow-down.svg" style="transform: rotate(180deg);" class="animation-element">
         <div id="second_enc_message" class="notification is-link column animation-element move2-message">
-            1c17626014fb19583d73d19cc60e11d1
+            Placeholder
         </div>
     </div>
 </div>
@@ -275,6 +289,9 @@
                     element.classList.add('active');
                 });
             }, 25000);
+            setTimeout(() => {
+                location.reload();
+            }, 35000);
         }
     }
     function resetAnimations() {
@@ -331,8 +348,5 @@
         }, 100);
     }
 </script>
-<div>
-    <button class="button is-warning is-dark" style="position: absolute; top: 20px; right: 20px; z-index: 9999;" onclick="resetAnimations()">Reset Animations</button>
-</div>
 </body>
 </html>
